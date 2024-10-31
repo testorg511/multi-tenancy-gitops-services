@@ -25,7 +25,7 @@ INGRESS_INTERNAL_HOST_API="api-${NS}."$(oc get ingress.config.openshift.io clust
 PURGE_IMG_REPO=${PURGE_IMG_REPO:-"cp.icr.io/cp/ibm-sfg/sfg-purge"}
 PURGE_IMG_TAG=${PURGE_IMG_TAG:-"6.1.0.0"}
 PURGE_PULLSECRET=${PURGE_PULLSECRET:-"ibm-entitlement-key"}
-RWX_STORAGECLASS=${RWX_STORAGECLASS:-"ibmc-file-gold"}
+RWX_STORAGECLASS=${RWX_STORAGECLASS:-"ocs-storagecluster-cephfs"}
 
 # Create Kubernetes yaml
 ( echo "cat <<EOF" ; cat ibm-sfg-b2bi-overrides-values.yaml_template ;) | \
